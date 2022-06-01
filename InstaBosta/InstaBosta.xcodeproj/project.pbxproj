@@ -13,6 +13,22 @@
 		2D587ABB2847819300139A58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D587AB92847819300139A58 /* LaunchScreen.storyboard */; };
 		2D587AC62847819300139A58 /* InstaBostaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AC52847819300139A58 /* InstaBostaTests.swift */; };
 		2D587AEB284785CE00139A58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AEA284785CE00139A58 /* ProfileViewController.swift */; };
+		2D587AF028478D9000139A58 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AEF28478D9000139A58 /* Config.swift */; };
+		2D587AFC28478EA000139A58 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AF428478EA000139A58 /* TargetType.swift */; };
+		2D587AFD28478EA000139A58 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AF528478EA000139A58 /* BaseAPI.swift */; };
+		2D587AFE28478EA000139A58 /* BaseParamaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AF628478EA000139A58 /* BaseParamaters.swift */; };
+		2D587AFF28478EA000139A58 /* NetworkErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AF828478EA000139A58 /* NetworkErrorMessage.swift */; };
+		2D587B0028478EA000139A58 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AFA28478EA000139A58 /* Paginator.swift */; };
+		2D587B0128478EA000139A58 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AFB28478EA000139A58 /* BaseResponse.swift */; };
+		2D587B0428478EE000139A58 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0328478EE000139A58 /* ProfileManager.swift */; };
+		2D587B0828478F0F00139A58 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0728478F0F00139A58 /* User.swift */; };
+		2D587B0B2847903900139A58 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0A2847903900139A58 /* Address.swift */; };
+		2D587B102847905E00139A58 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0F2847905E00139A58 /* UserViewModel.swift */; };
+		2D587B132847910D00139A58 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2D587B122847910D00139A58 /* Alamofire */; };
+		2D587B172847915300139A58 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B162847915300139A58 /* ProfileViewModel.swift */; };
+		2D587B1B284791E500139A58 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B19284791E500139A58 /* AccountSummaryHeaderView.swift */; };
+		2D587B1C284791E500139A58 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D587B1A284791E500139A58 /* AccountSummaryHeaderView.xib */; };
+		2D587B1F284792D600139A58 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B1E284792D600139A58 /* Date+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +54,21 @@
 		2D587AE22847822700139A58 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		2D587AE32847823200139A58 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		2D587AEA284785CE00139A58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2D587AEF28478D9000139A58 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2D587AF428478EA000139A58 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		2D587AF528478EA000139A58 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		2D587AF628478EA000139A58 /* BaseParamaters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseParamaters.swift; sourceTree = "<group>"; };
+		2D587AF828478EA000139A58 /* NetworkErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrorMessage.swift; sourceTree = "<group>"; };
+		2D587AFA28478EA000139A58 /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
+		2D587AFB28478EA000139A58 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		2D587B0328478EE000139A58 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		2D587B0728478F0F00139A58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2D587B0A2847903900139A58 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		2D587B0F2847905E00139A58 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		2D587B162847915300139A58 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		2D587B19284791E500139A58 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		2D587B1A284791E500139A58 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		2D587B1E284792D600139A58 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D587B132847910D00139A58 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +111,10 @@
 		2D587AAD2847819200139A58 /* InstaBosta */ = {
 			isa = PBXGroup;
 			children = (
+				2D587B1D284792B300139A58 /* Swift Extensions */,
+				2D587B0D2847905600139A58 /* BusinessLogic */,
+				2D587B0528478F0800139A58 /* Data Layer */,
+				2D587AF128478E7A00139A58 /* Network Layer */,
 				2D587AE42847844400139A58 /* Presentation Layer */,
 				2D587ADE284781F200139A58 /* Configurations */,
 				2D587ABC2847819300139A58 /* Info.plist */,
@@ -100,6 +136,7 @@
 				2D587ADF2847820800139A58 /* Default.xcconfig */,
 				2D587AE22847822700139A58 /* Release.xcconfig */,
 				2D587AE32847823200139A58 /* Debug.xcconfig */,
+				2D587AEF28478D9000139A58 /* Config.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -107,9 +144,9 @@
 		2D587AE42847844400139A58 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				2D587AEC28478B1E00139A58 /* Scenes */,
 				2D587AE92847849300139A58 /* Scene App Delegate */,
 				2D587AE82847848300139A58 /* Resources */,
-				2D587AE72847846200139A58 /* UIViewControllers */,
 				2D587AE52847845100139A58 /* Storyboards */,
 			);
 			path = "Presentation Layer";
@@ -156,6 +193,144 @@
 			path = "Scene App Delegate";
 			sourceTree = "<group>";
 		};
+		2D587AEC28478B1E00139A58 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AED28478B2700139A58 /* Profile */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2D587AED28478B2700139A58 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B18284791D100139A58 /* Header */,
+				2D587AEE28478B2D00139A58 /* CustomViews */,
+				2D587AE72847846200139A58 /* UIViewControllers */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2D587AEE28478B2D00139A58 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		2D587AF128478E7A00139A58 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AF328478E8400139A58 /* Networking */,
+				2D587AF228478E8300139A58 /* Base */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		2D587AF228478E8300139A58 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AF528478EA000139A58 /* BaseAPI.swift */,
+				2D587AF628478EA000139A58 /* BaseParamaters.swift */,
+				2D587AF728478EA000139A58 /* Constants */,
+				2D587AF928478EA000139A58 /* Response */,
+				2D587AF428478EA000139A58 /* TargetType.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2D587AF328478E8400139A58 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B0228478EC300139A58 /* Profile */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2D587AF728478EA000139A58 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AF828478EA000139A58 /* NetworkErrorMessage.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2D587AF928478EA000139A58 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AFA28478EA000139A58 /* Paginator.swift */,
+				2D587AFB28478EA000139A58 /* BaseResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2D587B0228478EC300139A58 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B0328478EE000139A58 /* ProfileManager.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2D587B0528478F0800139A58 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B0628478F0B00139A58 /* Models */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		2D587B0628478F0B00139A58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B092847902F00139A58 /* Profile */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D587B092847902F00139A58 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B0728478F0F00139A58 /* User.swift */,
+				2D587B0A2847903900139A58 /* Address.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2D587B0D2847905600139A58 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B0E2847905900139A58 /* Profile */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		2D587B0E2847905900139A58 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B0F2847905E00139A58 /* UserViewModel.swift */,
+				2D587B162847915300139A58 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2D587B18284791D100139A58 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B19284791E500139A58 /* AccountSummaryHeaderView.swift */,
+				2D587B1A284791E500139A58 /* AccountSummaryHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2D587B1D284792B300139A58 /* Swift Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B1E284792D600139A58 /* Date+Ext.swift */,
+			);
+			path = "Swift Extensions";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +347,9 @@
 			dependencies = (
 			);
 			name = InstaBosta;
+			packageProductDependencies = (
+				2D587B122847910D00139A58 /* Alamofire */,
+			);
 			productName = InstaBosta;
 			productReference = 2D587AAB2847819200139A58 /* InstaBosta.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +400,9 @@
 				Base,
 			);
 			mainGroup = 2D587AA22847819200139A58;
+			packageReferences = (
+				2D587B112847910C00139A58 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2D587AAC2847819200139A58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D587B1C284791E500139A58 /* AccountSummaryHeaderView.xib in Resources */,
 				2D587ABB2847819300139A58 /* LaunchScreen.storyboard in Resources */,
 				2D587AB82847819300139A58 /* Assets.xcassets in Resources */,
 			);
@@ -256,8 +438,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D587AFC28478EA000139A58 /* TargetType.swift in Sources */,
+				2D587B0828478F0F00139A58 /* User.swift in Sources */,
+				2D587B1F284792D600139A58 /* Date+Ext.swift in Sources */,
+				2D587B0B2847903900139A58 /* Address.swift in Sources */,
 				2D587AEB284785CE00139A58 /* ProfileViewController.swift in Sources */,
+				2D587B0028478EA000139A58 /* Paginator.swift in Sources */,
+				2D587B102847905E00139A58 /* UserViewModel.swift in Sources */,
+				2D587B0428478EE000139A58 /* ProfileManager.swift in Sources */,
+				2D587AF028478D9000139A58 /* Config.swift in Sources */,
+				2D587B1B284791E500139A58 /* AccountSummaryHeaderView.swift in Sources */,
+				2D587AFD28478EA000139A58 /* BaseAPI.swift in Sources */,
+				2D587B172847915300139A58 /* ProfileViewModel.swift in Sources */,
+				2D587B0128478EA000139A58 /* BaseResponse.swift in Sources */,
 				2D587AAF2847819200139A58 /* AppDelegate.swift in Sources */,
+				2D587AFF28478EA000139A58 /* NetworkErrorMessage.swift in Sources */,
+				2D587AFE28478EA000139A58 /* BaseParamaters.swift in Sources */,
 				2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +729,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D587B112847910C00139A58 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D587B122847910D00139A58 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D587B112847910C00139A58 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D587AA32847819200139A58 /* Project object */;
 }

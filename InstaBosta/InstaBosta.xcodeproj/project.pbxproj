@@ -102,13 +102,8 @@
 		2D587AAD2847819200139A58 /* InstaBosta */ = {
 			isa = PBXGroup;
 			children = (
+				2D587AE42847844400139A58 /* Presentation Layer */,
 				2D587ADE284781F200139A58 /* Configurations */,
-				2D587AAE2847819200139A58 /* AppDelegate.swift */,
-				2D587AB02847819200139A58 /* SceneDelegate.swift */,
-				2D587AB22847819200139A58 /* ViewController.swift */,
-				2D587AB42847819200139A58 /* Main.storyboard */,
-				2D587AB72847819300139A58 /* Assets.xcassets */,
-				2D587AB92847819300139A58 /* LaunchScreen.storyboard */,
 				2D587ABC2847819300139A58 /* Info.plist */,
 			);
 			path = InstaBosta;
@@ -139,6 +134,59 @@
 				2D587AE32847823200139A58 /* Debug.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		2D587AE42847844400139A58 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AE92847849300139A58 /* Scene App Delegate */,
+				2D587AE82847848300139A58 /* Resources */,
+				2D587AE72847846200139A58 /* UIViewControllers */,
+				2D587AE52847845100139A58 /* Storyboards */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		2D587AE52847845100139A58 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AE62847845500139A58 /* Launch */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2D587AE62847845500139A58 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AB42847819200139A58 /* Main.storyboard */,
+				2D587AB92847819300139A58 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		2D587AE72847846200139A58 /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AB22847819200139A58 /* ViewController.swift */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		2D587AE82847848300139A58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AB72847819300139A58 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D587AE92847849300139A58 /* Scene App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2D587AB02847819200139A58 /* SceneDelegate.swift */,
+				2D587AAE2847819200139A58 /* AppDelegate.swift */,
+			);
+			path = "Scene App Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -9,24 +9,14 @@
 /* Begin PBXBuildFile section */
 		2D587AAF2847819200139A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AAE2847819200139A58 /* AppDelegate.swift */; };
 		2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AB02847819200139A58 /* SceneDelegate.swift */; };
-		2D587AB32847819200139A58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AB22847819200139A58 /* ViewController.swift */; };
-		2D587AB62847819200139A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D587AB42847819200139A58 /* Main.storyboard */; };
 		2D587AB82847819300139A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D587AB72847819300139A58 /* Assets.xcassets */; };
 		2D587ABB2847819300139A58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D587AB92847819300139A58 /* LaunchScreen.storyboard */; };
 		2D587AC62847819300139A58 /* InstaBostaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AC52847819300139A58 /* InstaBostaTests.swift */; };
-		2D587AD02847819300139A58 /* InstaBostaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587ACF2847819300139A58 /* InstaBostaUITests.swift */; };
-		2D587AD22847819300139A58 /* InstaBostaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AD12847819300139A58 /* InstaBostaUITestsLaunchTests.swift */; };
+		2D587AEB284785CE00139A58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AEA284785CE00139A58 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2D587AC22847819300139A58 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2D587AA32847819200139A58 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D587AAA2847819200139A58;
-			remoteInfo = InstaBosta;
-		};
-		2D587ACC2847819300139A58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2D587AA32847819200139A58 /* Project object */;
 			proxyType = 1;
@@ -39,19 +29,15 @@
 		2D587AAB2847819200139A58 /* InstaBosta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBosta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D587AAE2847819200139A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D587AB02847819200139A58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D587AB22847819200139A58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2D587AB52847819200139A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D587AB72847819300139A58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D587ABA2847819300139A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D587ABC2847819300139A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D587AC12847819300139A58 /* InstaBostaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaBostaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D587AC52847819300139A58 /* InstaBostaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaBostaTests.swift; sourceTree = "<group>"; };
-		2D587ACB2847819300139A58 /* InstaBostaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaBostaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D587ACF2847819300139A58 /* InstaBostaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaBostaUITests.swift; sourceTree = "<group>"; };
-		2D587AD12847819300139A58 /* InstaBostaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaBostaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2D587ADF2847820800139A58 /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = "<group>"; };
 		2D587AE22847822700139A58 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		2D587AE32847823200139A58 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		2D587AEA284785CE00139A58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D587AC82847819300139A58 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,7 +63,6 @@
 			children = (
 				2D587AAD2847819200139A58 /* InstaBosta */,
 				2D587AC42847819300139A58 /* InstaBostaTests */,
-				2D587ACE2847819300139A58 /* InstaBostaUITests */,
 				2D587AAC2847819200139A58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +72,6 @@
 			children = (
 				2D587AAB2847819200139A58 /* InstaBosta.app */,
 				2D587AC12847819300139A58 /* InstaBostaTests.xctest */,
-				2D587ACB2847819300139A58 /* InstaBostaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,15 +92,6 @@
 				2D587AC52847819300139A58 /* InstaBostaTests.swift */,
 			);
 			path = InstaBostaTests;
-			sourceTree = "<group>";
-		};
-		2D587ACE2847819300139A58 /* InstaBostaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2D587ACF2847819300139A58 /* InstaBostaUITests.swift */,
-				2D587AD12847819300139A58 /* InstaBostaUITestsLaunchTests.swift */,
-			);
-			path = InstaBostaUITests;
 			sourceTree = "<group>";
 		};
 		2D587ADE284781F200139A58 /* Configurations */ = {
@@ -158,7 +126,6 @@
 		2D587AE62847845500139A58 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				2D587AB42847819200139A58 /* Main.storyboard */,
 				2D587AB92847819300139A58 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
@@ -167,7 +134,7 @@
 		2D587AE72847846200139A58 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2D587AB22847819200139A58 /* ViewController.swift */,
+				2D587AEA284785CE00139A58 /* ProfileViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -227,24 +194,6 @@
 			productReference = 2D587AC12847819300139A58 /* InstaBostaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2D587ACA2847819300139A58 /* InstaBostaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D587ADB2847819300139A58 /* Build configuration list for PBXNativeTarget "InstaBostaUITests" */;
-			buildPhases = (
-				2D587AC72847819300139A58 /* Sources */,
-				2D587AC82847819300139A58 /* Frameworks */,
-				2D587AC92847819300139A58 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2D587ACD2847819300139A58 /* PBXTargetDependency */,
-			);
-			name = InstaBostaUITests;
-			productName = InstaBostaUITests;
-			productReference = 2D587ACB2847819300139A58 /* InstaBostaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,10 +208,6 @@
 						CreatedOnToolsVersion = 13.3.1;
 					};
 					2D587AC02847819300139A58 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 2D587AAA2847819200139A58;
-					};
-					2D587ACA2847819300139A58 = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = 2D587AAA2847819200139A58;
 					};
@@ -283,7 +228,6 @@
 			targets = (
 				2D587AAA2847819200139A58 /* InstaBosta */,
 				2D587AC02847819300139A58 /* InstaBostaTests */,
-				2D587ACA2847819300139A58 /* InstaBostaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -295,18 +239,10 @@
 			files = (
 				2D587ABB2847819300139A58 /* LaunchScreen.storyboard in Resources */,
 				2D587AB82847819300139A58 /* Assets.xcassets in Resources */,
-				2D587AB62847819200139A58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2D587ABF2847819300139A58 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D587AC92847819300139A58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D587AB32847819200139A58 /* ViewController.swift in Sources */,
+				2D587AEB284785CE00139A58 /* ProfileViewController.swift in Sources */,
 				2D587AAF2847819200139A58 /* AppDelegate.swift in Sources */,
 				2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */,
 			);
@@ -334,15 +270,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D587AC72847819300139A58 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D587AD22847819300139A58 /* InstaBostaUITestsLaunchTests.swift in Sources */,
-				2D587AD02847819300139A58 /* InstaBostaUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -351,22 +278,9 @@
 			target = 2D587AAA2847819200139A58 /* InstaBosta */;
 			targetProxy = 2D587AC22847819300139A58 /* PBXContainerItemProxy */;
 		};
-		2D587ACD2847819300139A58 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2D587AAA2847819200139A58 /* InstaBosta */;
-			targetProxy = 2D587ACC2847819300139A58 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2D587AB42847819200139A58 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D587AB52847819200139A58 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2D587AB92847819300139A58 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -506,7 +420,6 @@
 				INFOPLIST_FILE = InstaBosta/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -534,7 +447,6 @@
 				INFOPLIST_FILE = InstaBosta/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -590,42 +502,6 @@
 			};
 			name = Release;
 		};
-		2D587ADC2847819300139A58 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D587AE32847823200139A58 /* Debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.atabany.InstaBostaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InstaBosta;
-			};
-			name = Debug;
-		};
-		2D587ADD2847819300139A58 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D587AE22847822700139A58 /* Release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.atabany.InstaBostaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InstaBosta;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -652,15 +528,6 @@
 			buildConfigurations = (
 				2D587AD92847819300139A58 /* Debug */,
 				2D587ADA2847819300139A58 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D587ADB2847819300139A58 /* Build configuration list for PBXNativeTarget "InstaBostaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D587ADC2847819300139A58 /* Debug */,
-				2D587ADD2847819300139A58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

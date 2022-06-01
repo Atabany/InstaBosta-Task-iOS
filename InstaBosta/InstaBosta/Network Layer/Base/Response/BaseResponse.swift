@@ -2,9 +2,9 @@
 //  BaseResponse.swift
 //  NetworkLayer
 //
-//  Created by Ahmed masoud on 6/29/20.
-//  Copyright © 2020 Ahmed Masoud. All rights reserved.
+//  InstaBosta
 //
+//  Created by Mohamed Elatabany on 01/06/2022.
 
 import Foundation
 

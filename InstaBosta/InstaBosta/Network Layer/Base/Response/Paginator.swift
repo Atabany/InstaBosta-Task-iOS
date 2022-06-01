@@ -1,8 +1,7 @@
 //  Paginator.swift
-//  Marvel
+//  InstaBosta
 //
-//  Created by Mohamed Elatabany on 29/05/2022.
-//
+//  Created by Mohamed Elatabany on 01/06/2022.
 
 
 

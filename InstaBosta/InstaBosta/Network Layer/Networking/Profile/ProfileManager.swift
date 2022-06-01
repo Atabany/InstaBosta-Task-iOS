@@ -1,9 +1,8 @@
 //
 //  ProfileManager.swift
-//  Banky
+//  InstaBosta
 //
-//  Created by Mohamed Elatabany on 20/03/2022.
-//
+//  Created by Mohamed Elatabany on 01/06/2022.
 
 import Foundation
 
@@ -14,11 +13,8 @@ protocol ProfileManageable: AnyObject {
 
 
 class ProfileManager: ProfileManageable {
-    
     func fetchProfile(completion: @escaping (Result<ProfileViewModel, NSError>) -> Void) {
 
 
     }
-    
-
 }

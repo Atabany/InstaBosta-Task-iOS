@@ -1,8 +1,8 @@
 //
 //  BaseParamaters.swift
-//  Marvel
+//  InstaBosta
 //
-//  Created by Mohamed Elatabany on 30/05/2022.
+//  Created by Mohamed Elatabany on 01/06/2022.
 //
 
 import Foundation

@@ -36,6 +36,8 @@ class ProfileViewModel {
         bindUser()
         // - BIND Albums
         bindAlbums()
+        // - Album DataSource
+        bindAlbumsDataSource()
     }
     
     private func bindUser() {
@@ -51,13 +53,31 @@ class ProfileViewModel {
     private func bindAlbums() {
         profileManager.albums.subscribe(onNext: { [unowned self] returnedAlbums in
             self.albums.accept(returnedAlbums ?? [])
-            print(returnedAlbums)
         }).disposed(by: disposeBag)
     }
     
+    
+    private func bindAlbumsDataSource() {
+        albums.subscribe(onNext: { [weak self] albums in
+            self?.createTableViewSections(albums: albums)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func createTableViewSections(albums: [AlbumResponse]) {
+        var sections: [ProfileSection] = []
+        if !albums.isEmpty {
+            sections.append(ProfileSection(header: "Albums", items: albums))
+        }
+        tableViewSections.accept(sections)
+    }
+
 
     private func fetchProfileData() {
         profileManager.fetchUsers()
     }
+    
+    
+    
+    
     
 }

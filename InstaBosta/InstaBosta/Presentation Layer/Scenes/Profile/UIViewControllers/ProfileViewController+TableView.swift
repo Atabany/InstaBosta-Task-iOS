@@ -19,7 +19,7 @@ extension ProfileViewController {
     func setupTableView() {
 
         tableView.backgroundColor = .systemBackground
-        
+
         tableView.rowHeight = AlbumTableCell.rowHeight
         tableView.tableFooterView = UIView()
         

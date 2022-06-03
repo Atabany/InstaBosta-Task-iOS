@@ -20,8 +20,9 @@ extension ProfileViewController {
 
     
     func binding() {
-        tableViewBinding()
         bindUserHeader()
+        tableViewBinding()
+        tableViewSelection()
     }
 
 
@@ -36,7 +37,7 @@ extension ProfileViewController {
 
     }
     
-    
+
     private func tableViewBinding() {
         createTableViewDataSource()
         if let albumsDataSource = albumsDataSource {
@@ -45,6 +46,12 @@ extension ProfileViewController {
         }
     }
     
+    
+    private func tableViewSelection() {
+        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
+            self?.tableView.deselectRow(at: indexPath, animated: true)
+        }).disposed(by: self.disposeBag)
+    }
     
     
     // MARK: - Data Source

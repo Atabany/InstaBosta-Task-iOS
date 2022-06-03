@@ -8,7 +8,9 @@
 import UIKit
 
 class AlbumTableCell: UITableViewCell {
+    
     var viewModel: AlbumItemViewModel? = nil
+    
     let titleLabel: UILabel = UILabel()
     static let rowHeight: CGFloat = 112
     static let reuseID = AlbumTableCell.description()

@@ -15,7 +15,6 @@ import RxDataSources
 class ProfileViewModel {
     
     
-    
     // MARK: -  Variables
     var user: BehaviorRelay<UserResponse?> = BehaviorRelay<UserResponse?>(value: nil)
     var albums: BehaviorRelay<[AlbumResponse]> = BehaviorRelay<[AlbumResponse]>(value: [])
@@ -28,23 +27,37 @@ class ProfileViewModel {
     init(profileManager: ProfileManageable) {
         self.profileManager = profileManager
         binding()
-        profileManager.fetchUsers()
+        fetchProfileData()
     }
     
     // MARK: - Binding
     private func binding() {
-        bindingUser()
+        // - BIND USER
+        bindUser()
+        // - BIND Albums
+        bindAlbums()
     }
     
-    
-    private func bindingUser() {
-                
+    private func bindUser() {
         profileManager.user.bind(to: user).disposed(by: disposeBag)
         user.subscribe(onNext: { [unowned self] user in
             // get the albums of the selected user
-            guard let user = user else {return}
-
+            profileManager.fetchAlbums(userID: user?.id ?? 0)
         }).disposed(by: disposeBag)
+
+    }
+    
+
+    private func bindAlbums() {
+        profileManager.albums.subscribe(onNext: { [unowned self] returnedAlbums in
+            self.albums.accept(returnedAlbums ?? [])
+            print(returnedAlbums)
+        }).disposed(by: disposeBag)
+    }
+    
+
+    private func fetchProfileData() {
+        profileManager.fetchUsers()
     }
     
 }

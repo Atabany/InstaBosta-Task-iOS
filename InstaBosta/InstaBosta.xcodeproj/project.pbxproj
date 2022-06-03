@@ -15,6 +15,7 @@
 		2D1B511F284A9794001541A9 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1B511E284A9794001541A9 /* ReactiveMoya */; };
 		2D1B5121284A9794001541A9 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1B5120284A9794001541A9 /* RxMoya */; };
 		2D1B5125284A98BC001541A9 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5124284A98BC001541A9 /* UserAPI.swift */; };
+		2D1B5128284AA9F3001541A9 /* AlbumsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5127284AA9F3001541A9 /* AlbumsAPI.swift */; };
 		2D587AAF2847819200139A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AAE2847819200139A58 /* AppDelegate.swift */; };
 		2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AB02847819200139A58 /* SceneDelegate.swift */; };
 		2D587AB82847819300139A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D587AB72847819300139A58 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		2D1B5110284A9406001541A9 /* ProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSection.swift; sourceTree = "<group>"; };
 		2D1B5112284A94B0001541A9 /* ProfileViewController+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+Binding.swift"; sourceTree = "<group>"; };
 		2D1B5124284A98BC001541A9 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		2D1B5127284AA9F3001541A9 /* AlbumsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsAPI.swift; sourceTree = "<group>"; };
 		2D587AAB2847819200139A58 /* InstaBosta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBosta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D587AAE2847819200139A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D587AB02847819200139A58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,8 +125,18 @@
 		2D1B5123284A98B4001541A9 /* AlbumsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2D1B5127284AA9F3001541A9 /* AlbumsAPI.swift */,
 			);
 			path = AlbumsAPI;
+			sourceTree = "<group>";
+		};
+		2D1B5126284AA9D5001541A9 /* APIS */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B5123284A98B4001541A9 /* AlbumsAPI */,
+				2D1B5122284A98AD001541A9 /* UserAPI */,
+			);
+			path = APIS;
 			sourceTree = "<group>";
 		};
 		2D587AA22847819200139A58 = {
@@ -275,9 +287,8 @@
 		2D587AF328478E8400139A58 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2D1B5123284A98B4001541A9 /* AlbumsAPI */,
-				2D1B5122284A98AD001541A9 /* UserAPI */,
-				2D587B0228478EC300139A58 /* Profile */,
+				2D1B5126284AA9D5001541A9 /* APIS */,
+				2D587B0228478EC300139A58 /* Managers */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -290,12 +301,12 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
-		2D587B0228478EC300139A58 /* Profile */ = {
+		2D587B0228478EC300139A58 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				2D587B0328478EE000139A58 /* ProfileManager.swift */,
 			);
-			path = Profile;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		2D587B0528478F0800139A58 /* Data Layer */ = {
@@ -537,6 +548,7 @@
 				2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */,
 				2D587B362847BB4400139A58 /* ProfileViewController+TableView.swift in Sources */,
 				2D587B2B2847ACD900139A58 /* Album.swift in Sources */,
+				2D1B5128284AA9F3001541A9 /* AlbumsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

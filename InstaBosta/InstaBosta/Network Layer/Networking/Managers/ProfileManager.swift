@@ -9,12 +9,19 @@ import RxSwift
 protocol ProfileManageable: AnyObject {
     var users: PublishSubject<[UserResponse]?> { get set }
     var user: PublishSubject<UserResponse?> { get set }
+    
+    var albums: PublishSubject<[AlbumResponse]?> { get set }
+
     func fetchUsers()
-    func fetchAlbums()
+    func fetchAlbums(userID: Int)
 }
 
 
 class ProfileWebServiceManager: ProfileManageable {
+    
+    var albums: PublishSubject<[AlbumResponse]?> = PublishSubject<[AlbumResponse]?>()
+    
+        
     var users: PublishSubject<[UserResponse]?> = PublishSubject<[UserResponse]?>()
     var user: PublishSubject<UserResponse?> = PublishSubject<UserResponse?>()
 
@@ -33,10 +40,9 @@ class ProfileWebServiceManager: ProfileManageable {
         .disposed(by:  disposeBag)
     }
     
-    func fetchAlbums() {
-        
-        
-        
+    func fetchAlbums(userID: Int) {
+        let userAlbumsRequest = AlbumAPI.getAlbums(userId: userID)
+        api.fetchData(request: userAlbumsRequest, responseObservable: albums )
     }
     
         

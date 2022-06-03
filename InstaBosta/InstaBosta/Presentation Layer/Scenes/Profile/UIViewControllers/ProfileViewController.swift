@@ -22,7 +22,8 @@ class ProfileViewController: UIViewController {
     let viewModel: ProfileViewModel = ProfileViewModel(profileManager: ProfileWebServiceManager())
     let disposeBag = DisposeBag()
 
-    
+    var albumsDataSource: RxTableViewSectionedReloadDataSource<ProfileSection>?
+
 
     // MARK: - vc life cycle
     override func viewDidLoad() {
@@ -39,7 +40,6 @@ extension ProfileViewController {
     private func setup() {
         setupTableView()
         setupTableHeaderView()
-        setupRefreshControl()
         binding()
     }
     

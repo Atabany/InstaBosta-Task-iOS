@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class AlbumResponse: Codable {
     let id: Int?
     let userId: Int?

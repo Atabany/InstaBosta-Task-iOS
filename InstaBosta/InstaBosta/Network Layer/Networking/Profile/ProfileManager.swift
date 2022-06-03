@@ -11,10 +11,11 @@ protocol ProfileManageable: AnyObject {
 }
 
 
-
 class ProfileManager: ProfileManageable {
     func fetchProfile(completion: @escaping (Result<ProfileViewModel, NSError>) -> Void) {
 
-
+        
+        
+        
     }
 }

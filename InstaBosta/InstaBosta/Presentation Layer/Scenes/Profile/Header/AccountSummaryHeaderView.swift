@@ -16,8 +16,6 @@ class AccountSummaryHeaderView: UIView {
     
     
     
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -38,7 +36,6 @@ class AccountSummaryHeaderView: UIView {
         let bundle = Bundle(for: AccountSummaryHeaderView.self)
         bundle.loadNibNamed("AccountSummaryHeaderView", owner: self, options: nil)
         addSubview(contentView)
-//        contentView.backgroundColor = K.colors.appColor
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
@@ -46,43 +43,16 @@ class AccountSummaryHeaderView: UIView {
         contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
-        
-        
     }
-    
-    
-
-    
-    
-    
-
-    
-    
 }
 
 
 extension AccountSummaryHeaderView {
-    
-    func configure(viewModel: ViewModel) {
+    func configure(viewModel: ProfileHeaderViewModel) {
         welcomeLabel.text = viewModel.welcomeMessage
         nameLabel.text = viewModel.name
         dateLabel.text = viewModel.dateFormatted
     }
-
-}
-
-extension AccountSummaryHeaderView {
-    
-    struct ViewModel {
-        let welcomeMessage: String
-        let name: String
-        let date: Date
-        
-        var dateFormatted: String {
-            return date.monthDayYearString
-        }
-    }
-    
 }
 
 

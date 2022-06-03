@@ -24,5 +24,8 @@ class AlbumPhotosWebServiceManager: AlbumPhotosManageable {
     func fetchAlbumPhotos(albumId: Int) {
         let photosRequest = PhotosAPI.getAlbumPhotos(albumId: albumId)
         api.fetchData(request: photosRequest, responseObservable: photos)
+        photos.subscribe(onNext: { photos in
+            print(photos)
+        })
     }
 }

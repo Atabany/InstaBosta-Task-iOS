@@ -20,26 +20,28 @@ class AlbumPhotosGridViewModel {
     var allAlbumPhotos: BehaviorRelay<[Photo]> = BehaviorRelay<[Photo]>(value: [])
     var collectionViewAlbumPhotos: BehaviorRelay<[Photo]> = BehaviorRelay<[Photo]>(value: [])
     var collectionViewSections: BehaviorRelay<[AlbumPhotosGridSection]> = BehaviorRelay<[AlbumPhotosGridSection]>(value: [])
-    let title: PublishSubject<String> = PublishSubject<String>()
+    let title: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
     let disposeBag = DisposeBag()
-    
+    let photosService: AlbumPhotosManageable
     
     // MARK: - Initialization
-    init(album: AlbumResponse) {
+    init(album: AlbumResponse, photosService: AlbumPhotosManageable) {
         self.album = album
+        self.photosService = photosService
         title.onNext(album.title ?? "")
-        rxBinding()
+        bindings()
+        fetchData()
     }
     
     
     
     // MARK: - Binding
-    private func rxBinding() {
-        bindAlbumRepo()
+    private func bindings() {
+        bindAlbumPhotos()
         bindSections()
     }
     
-    private func bindAlbumRepo() {
+    private func bindAlbumPhotos() {
         allAlbumPhotos.subscribe(onNext: {[unowned self] allAlbumPhotos in
             self.collectionViewAlbumPhotos.accept(allAlbumPhotos)
         }).disposed(by: disposeBag)
@@ -54,8 +56,7 @@ class AlbumPhotosGridViewModel {
     
     // MARK: - Fetch data
     private func fetchData() {
-        
-        
+        photosService.fetchAlbumPhotos(albumId: album.id ?? 0)
     }
 
     

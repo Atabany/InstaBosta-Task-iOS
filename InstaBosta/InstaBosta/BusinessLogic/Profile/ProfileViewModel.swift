@@ -43,7 +43,7 @@ class ProfileViewModel {
         user.subscribe(onNext: { [unowned self] user in
             // get the albums of the selected user
             guard let user = user else {return}
-            print(user.name)
+
         }).disposed(by: disposeBag)
     }
     

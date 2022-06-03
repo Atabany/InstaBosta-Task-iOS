@@ -11,22 +11,20 @@ import Foundation
 
 extension ProfileViewController {
     
-    func bindUserInfo(user: UserViewModel) {
+    func bindUserInfo(user: ProfileHeaderViewModel) {
         headerView.nameLabel.text = user.name
         headerView.addressLabel.text = user.address
     }
 
     
     func binding() {
-        
-        viewModel.user.subscribe(onNext: {[weak self] user in
-            guard let user = user else {
+        viewModel.user.subscribe(onNext: {[unowned self] user in
+            guard let user = user  else {
                 return
             }
             
-
+            self.bindUserInfo(user: ProfileHeaderViewModel(user: user))
         }).disposed(by: disposeBag)
-
     }
 
     

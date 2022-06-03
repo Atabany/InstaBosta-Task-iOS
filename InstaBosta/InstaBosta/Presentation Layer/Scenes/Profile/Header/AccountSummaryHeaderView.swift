@@ -47,14 +47,6 @@ class AccountSummaryHeaderView: UIView {
 }
 
 
-extension AccountSummaryHeaderView {
-    func configure(viewModel: ProfileHeaderViewModel) {
-        welcomeLabel.text = viewModel.welcomeMessage
-        nameLabel.text = viewModel.name
-        addressLabel.text = viewModel.dateFormatted
-    }
-}
-
 
 
 

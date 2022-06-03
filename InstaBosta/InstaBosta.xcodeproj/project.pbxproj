@@ -29,7 +29,7 @@
 		2D587B0428478EE000139A58 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0328478EE000139A58 /* ProfileManager.swift */; };
 		2D587B0828478F0F00139A58 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0728478F0F00139A58 /* User.swift */; };
 		2D587B0B2847903900139A58 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0A2847903900139A58 /* Address.swift */; };
-		2D587B102847905E00139A58 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0F2847905E00139A58 /* UserViewModel.swift */; };
+		2D587B102847905E00139A58 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B0F2847905E00139A58 /* ProfileHeaderViewModel.swift */; };
 		2D587B172847915300139A58 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B162847915300139A58 /* ProfileViewModel.swift */; };
 		2D587B1B284791E500139A58 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B19284791E500139A58 /* AccountSummaryHeaderView.swift */; };
 		2D587B1C284791E500139A58 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D587B1A284791E500139A58 /* AccountSummaryHeaderView.xib */; };
@@ -39,7 +39,6 @@
 		2D587B2B2847ACD900139A58 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B2A2847ACD900139A58 /* Album.swift */; };
 		2D587B2E2847ADD300139A58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B2D2847ADD300139A58 /* Constants.swift */; };
 		2D587B312847AEB200139A58 /* UIColor+HexValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B302847AEB200139A58 /* UIColor+HexValue.swift */; };
-		2D587B342847BAEB00139A58 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B332847BAEB00139A58 /* ProfileHeaderViewModel.swift */; };
 		2D587B362847BB4400139A58 /* ProfileViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B352847BB4400139A58 /* ProfileViewController+TableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +76,7 @@
 		2D587B0328478EE000139A58 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		2D587B0728478F0F00139A58 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2D587B0A2847903900139A58 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		2D587B0F2847905E00139A58 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		2D587B0F2847905E00139A58 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		2D587B162847915300139A58 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2D587B19284791E500139A58 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		2D587B1A284791E500139A58 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
@@ -87,7 +86,6 @@
 		2D587B2A2847ACD900139A58 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		2D587B2D2847ADD300139A58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2D587B302847AEB200139A58 /* UIColor+HexValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexValue.swift"; sourceTree = "<group>"; };
-		2D587B332847BAEB00139A58 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		2D587B352847BB4400139A58 /* ProfileViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -339,8 +337,7 @@
 		2D587B0E2847905900139A58 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				2D587B322847BAE000139A58 /* Header */,
-				2D587B0F2847905E00139A58 /* UserViewModel.swift */,
+				2D587B0F2847905E00139A58 /* ProfileHeaderViewModel.swift */,
 				2D587B282847AC9B00139A58 /* AlbumItemViewModel.swift */,
 				2D587B162847915300139A58 /* ProfileViewModel.swift */,
 			);
@@ -401,14 +398,6 @@
 				2D587B302847AEB200139A58 /* UIColor+HexValue.swift */,
 			);
 			path = "UIKit+Extensions";
-			sourceTree = "<group>";
-		};
-		2D587B322847BAE000139A58 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				2D587B332847BAEB00139A58 /* ProfileHeaderViewModel.swift */,
-			);
-			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,11 +522,10 @@
 				2D1B5111284A9406001541A9 /* ProfileSection.swift in Sources */,
 				2D587AEB284785CE00139A58 /* ProfileViewController.swift in Sources */,
 				2D587B312847AEB200139A58 /* UIColor+HexValue.swift in Sources */,
-				2D587B102847905E00139A58 /* UserViewModel.swift in Sources */,
+				2D587B102847905E00139A58 /* ProfileHeaderViewModel.swift in Sources */,
 				2D587B0428478EE000139A58 /* ProfileManager.swift in Sources */,
 				2D587AF028478D9000139A58 /* Config.swift in Sources */,
 				2D587B1B284791E500139A58 /* AccountSummaryHeaderView.swift in Sources */,
-				2D587B342847BAEB00139A58 /* ProfileHeaderViewModel.swift in Sources */,
 				2D1B5113284A94B0001541A9 /* ProfileViewController+Binding.swift in Sources */,
 				2D587B2E2847ADD300139A58 /* Constants.swift in Sources */,
 				2D587AFD28478EA000139A58 /* BaseAPI.swift in Sources */,

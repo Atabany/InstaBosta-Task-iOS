@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct UserViewModel {
-    
+struct ProfileHeaderViewModel {
+
     var user: UserResponse!
+    
     init(user: UserResponse) {
         self.user = user
     }

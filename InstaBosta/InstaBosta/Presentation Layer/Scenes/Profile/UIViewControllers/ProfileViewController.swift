@@ -11,7 +11,6 @@ import RxRelay
 import RxDataSources
 
 
-
 class ProfileViewController: UIViewController {
     
     // MARK: - UI Components
@@ -24,8 +23,7 @@ class ProfileViewController: UIViewController {
     let disposeBag = DisposeBag()
 
     
-    
-    
+
     // MARK: - vc life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

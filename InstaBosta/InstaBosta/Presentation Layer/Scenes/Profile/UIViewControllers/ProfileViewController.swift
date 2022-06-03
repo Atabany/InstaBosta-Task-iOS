@@ -30,7 +30,11 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         setup()
         style()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 
@@ -50,8 +54,6 @@ extension ProfileViewController {
 extension ProfileViewController {
     private func style() {
         view.backgroundColor = .systemBackground
-        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
-
 

@@ -66,7 +66,7 @@ class ProfileViewModel {
     private func createTableViewSections(albums: [AlbumResponse]) {
         var sections: [ProfileSection] = []
         if !albums.isEmpty {
-            sections.append(ProfileSection(header: "Albums", items: albums))
+            sections.append(ProfileSection(header: K.Strings.Profile.myAlbums, items: albums))
         }
         tableViewSections.accept(sections)
     }

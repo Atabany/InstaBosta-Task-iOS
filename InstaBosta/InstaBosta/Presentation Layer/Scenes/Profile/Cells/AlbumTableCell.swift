@@ -9,7 +9,6 @@ import UIKit
 
 class AlbumTableCell: UITableViewCell {
     
-    
     let titleLabel: UILabel = UILabel()
     static let rowHeight: CGFloat = 60
     static let reuseID = AlbumTableCell.description()
@@ -27,7 +26,6 @@ class AlbumTableCell: UITableViewCell {
     }
     
 }
-
 
 
 extension AlbumTableCell {

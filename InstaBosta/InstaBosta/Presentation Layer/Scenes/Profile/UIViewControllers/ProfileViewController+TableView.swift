@@ -6,16 +6,9 @@
 //
 
 import UIKit
-import RxRelay
-import RxSwift
-import RxDataSources
-
-
 
 extension ProfileViewController {
     
-    
-
     func setupTableView() {
 
         tableView.backgroundColor = .systemBackground
@@ -42,9 +35,6 @@ extension ProfileViewController {
         headerView.frame.size = size
         tableView.tableHeaderView = headerView
     }
-    
-
-
     
     
 }

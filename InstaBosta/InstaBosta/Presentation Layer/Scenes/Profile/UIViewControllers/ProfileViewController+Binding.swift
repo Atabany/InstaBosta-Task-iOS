@@ -48,8 +48,11 @@ extension ProfileViewController {
     
     
     private func tableViewSelection() {
-        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-            self?.tableView.deselectRow(at: indexPath, animated: true)
+        tableView.rx.itemSelected.subscribe(onNext: { [unowned self] indexPath in
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            guard let album = self.albumsDataSource?[indexPath] else { return }
+            let photosGridVC = AlbumDetailsPhotosGridViewController(viewModel: AlbumPhotosGridViewModel(album: album))
+            self.navigationController?.pushViewController(photosGridVC, animated: true)
         }).disposed(by: self.disposeBag)
     }
     
@@ -61,7 +64,12 @@ extension ProfileViewController {
                 let cell: AlbumTableCell = AlbumTableCell()
                 cell.configure(with: AlbumItemViewModel(album: album))
                 return cell
-            })
+            },
+            
+            titleForHeaderInSection: { dataSoruce, sectionIndex in
+                return dataSoruce[sectionIndex].header
+            }
+        )
     }
 
 

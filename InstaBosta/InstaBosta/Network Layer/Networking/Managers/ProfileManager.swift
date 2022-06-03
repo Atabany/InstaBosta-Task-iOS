@@ -35,6 +35,8 @@ class ProfileWebServiceManager: ProfileManageable {
     
     func fetchAlbums() {
         
+        
+        
     }
     
         

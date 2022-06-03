@@ -24,6 +24,9 @@
 		2D1B5137284ABFA4001541A9 /* AlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5136284ABFA4001541A9 /* AlbumManager.swift */; };
 		2D1B513E284AC06C001541A9 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B513D284AC06C001541A9 /* PhotosAPI.swift */; };
 		2D1B5142284AC529001541A9 /* AlbumDetailsPhotosGridViewController + Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5141284AC529001541A9 /* AlbumDetailsPhotosGridViewController + Binding.swift */; };
+		2D1B5144284ACAD5001541A9 /* PhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5143284ACAD5001541A9 /* PhotoCollectionCell.swift */; };
+		2D1B5146284ACC02001541A9 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5145284ACC02001541A9 /* UIImage+Ext.swift */; };
+		2D1B5148284ACDE1001541A9 /* AlbumDetailsPhotosGridViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5147284ACDE1001541A9 /* AlbumDetailsPhotosGridViewController + CollectionView.swift */; };
 		2D587AAF2847819200139A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AAE2847819200139A58 /* AppDelegate.swift */; };
 		2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587AB02847819200139A58 /* SceneDelegate.swift */; };
 		2D587AB82847819300139A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D587AB72847819300139A58 /* Assets.xcassets */; };
@@ -73,6 +76,9 @@
 		2D1B5136284ABFA4001541A9 /* AlbumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumManager.swift; sourceTree = "<group>"; };
 		2D1B513D284AC06C001541A9 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
 		2D1B5141284AC529001541A9 /* AlbumDetailsPhotosGridViewController + Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumDetailsPhotosGridViewController + Binding.swift"; sourceTree = "<group>"; };
+		2D1B5143284ACAD5001541A9 /* PhotoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCell.swift; sourceTree = "<group>"; };
+		2D1B5145284ACC02001541A9 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		2D1B5147284ACDE1001541A9 /* AlbumDetailsPhotosGridViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumDetailsPhotosGridViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		2D587AAB2847819200139A58 /* InstaBosta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBosta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D587AAE2847819200139A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D587AB02847819200139A58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 		2D1B513F284AC11A001541A9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2D1B5143284ACAD5001541A9 /* PhotoCollectionCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 			children = (
 				2D1B512B284ABCC2001541A9 /* AlbumDetailsPhotosGridViewController.swift */,
 				2D1B5141284AC529001541A9 /* AlbumDetailsPhotosGridViewController + Binding.swift */,
+				2D1B5147284ACDE1001541A9 /* AlbumDetailsPhotosGridViewController + CollectionView.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				2D587B302847AEB200139A58 /* UIColor+HexValue.swift */,
+				2D1B5145284ACC02001541A9 /* UIImage+Ext.swift */,
 				2D1B5132284ABE31001541A9 /* UICollectionViewFlowLayout + Ext.swift */,
 			);
 			path = "UIKit+Extensions";
@@ -596,6 +605,8 @@
 				2D587AF028478D9000139A58 /* Config.swift in Sources */,
 				2D587B1B284791E500139A58 /* AccountSummaryHeaderView.swift in Sources */,
 				2D1B5113284A94B0001541A9 /* ProfileViewController+Binding.swift in Sources */,
+				2D1B5148284ACDE1001541A9 /* AlbumDetailsPhotosGridViewController + CollectionView.swift in Sources */,
+				2D1B5146284ACC02001541A9 /* UIImage+Ext.swift in Sources */,
 				2D1B513E284AC06C001541A9 /* PhotosAPI.swift in Sources */,
 				2D587B2E2847ADD300139A58 /* Constants.swift in Sources */,
 				2D587AFD28478EA000139A58 /* BaseAPI.swift in Sources */,
@@ -607,6 +618,7 @@
 				2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */,
 				2D587B362847BB4400139A58 /* ProfileViewController+TableView.swift in Sources */,
 				2D587B2B2847ACD900139A58 /* Album.swift in Sources */,
+				2D1B5144284ACAD5001541A9 /* PhotoCollectionCell.swift in Sources */,
 				2D1B512C284ABCC2001541A9 /* AlbumDetailsPhotosGridViewController.swift in Sources */,
 				2D1B5128284AA9F3001541A9 /* AlbumsAPI.swift in Sources */,
 			);

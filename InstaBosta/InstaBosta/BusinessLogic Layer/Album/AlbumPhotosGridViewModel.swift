@@ -42,6 +42,10 @@ class AlbumPhotosGridViewModel {
     }
     
     private func bindAlbumPhotos() {
+        photosService.photos.subscribe(onNext: { [unowned self] photos in
+            self.allAlbumPhotos.accept(photos ?? [])
+        }).disposed(by: disposeBag)
+        
         allAlbumPhotos.subscribe(onNext: {[unowned self] allAlbumPhotos in
             self.collectionViewAlbumPhotos.accept(allAlbumPhotos)
         }).disposed(by: disposeBag)
@@ -74,6 +78,3 @@ class AlbumPhotosGridViewModel {
 }
 
 
-extension AlbumPhotosGridViewModel {
-    
-}

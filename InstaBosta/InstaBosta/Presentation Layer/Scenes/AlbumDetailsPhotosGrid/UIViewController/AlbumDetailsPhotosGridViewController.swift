@@ -7,6 +7,8 @@
 
 import UIKit
 import RxSwift
+import RxRelay
+import RxDataSources
 
 class AlbumDetailsPhotosGridViewController: UIViewController {
     
@@ -16,9 +18,10 @@ class AlbumDetailsPhotosGridViewController: UIViewController {
     
     // MARK: - Properties
     var viewModel: AlbumPhotosGridViewModel
-    
     var disposeBag = DisposeBag()
-    
+    // MARK: - Data Source
+    var photoGridDataSource: RxCollectionViewSectionedReloadDataSource<AlbumPhotosGridSection>?
+
     
     //MARK: - Life Cycle
     init(viewModel: AlbumPhotosGridViewModel) {

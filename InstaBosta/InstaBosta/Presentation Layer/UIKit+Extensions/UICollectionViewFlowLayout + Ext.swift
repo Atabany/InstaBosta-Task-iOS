@@ -8,13 +8,13 @@
 import UIKit
 
 extension UICollectionViewFlowLayout {
-    func configureColoumnsFlowLayout(in view: UIView, with numberOfColumns: CGFloat)  {
+    func configureColoumnsFlowLayout(in view: UIView, with numberOfColumns: CGFloat, padding: CGFloat = 0)  {
         let width = view.bounds.width
-        let padding: CGFloat = 12
-        let minWidthSpacing: CGFloat = 10
+        let padding: CGFloat = padding
+        let minWidthSpacing: CGFloat = 0
         let availableWidth = width - (padding * 2)  - ( minWidthSpacing * (numberOfColumns - 1))
         let itemWidth = availableWidth / numberOfColumns
         sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
+        itemSize = CGSize(width: itemWidth, height: itemWidth)
     }
 }

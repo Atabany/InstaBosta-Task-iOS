@@ -7,7 +7,7 @@
 //  Created by Mohamed Elatabany on 01/06/2022.
 //
 
-import Foundation
+import UIKit
 import RxSwift
 import Moya
 import RxMoya
@@ -17,6 +17,8 @@ class BaseAPI {
     
     let disposeBag = DisposeBag()
     
+    let cashe = NSCache<NSString, UIImage>()
+
     func fetchData<T: TargetType, ModelType: Codable>(request: T, responseObservable: PublishSubject<ModelType>) {
         let provider = MoyaProvider<T>()
         let decoder: JSONDecoder = JSONDecoder()
@@ -54,3 +56,24 @@ enum GatewayError: Error {
     case decoding
     case backEnd(code: Int, payload: [String: Any]?)
 }
+
+
+
+//MARK: -  Image
+extension BaseAPI {
+    func downloadImage(from urlString: String) async -> UIImage? {
+        let casheKey = NSString(string: urlString)
+        if let image = cashe.object(forKey: casheKey) { return image }
+        guard let url = URL(string: urlString) else {return nil }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let image = UIImage(data: data) else { return nil }
+            self.cashe.setObject(image, forKey: casheKey)
+            return image
+        } catch { return nil }
+    }
+}
+
+
+
+

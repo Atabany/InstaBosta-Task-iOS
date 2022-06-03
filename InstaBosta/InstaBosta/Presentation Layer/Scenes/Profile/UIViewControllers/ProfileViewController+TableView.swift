@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import RxRelay
+import RxSwift
+import RxDataSources
+
+
 
 extension ProfileViewController {
 
@@ -47,6 +52,10 @@ extension ProfileViewController {
         refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
         tableView.refreshControl = refreshControl
     }
+    
+    
+
+    
     
 }
 

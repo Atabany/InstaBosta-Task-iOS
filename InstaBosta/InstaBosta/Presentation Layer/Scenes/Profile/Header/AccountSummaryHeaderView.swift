@@ -12,7 +12,7 @@ class AccountSummaryHeaderView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     
     
@@ -51,7 +51,7 @@ extension AccountSummaryHeaderView {
     func configure(viewModel: ProfileHeaderViewModel) {
         welcomeLabel.text = viewModel.welcomeMessage
         nameLabel.text = viewModel.name
-        dateLabel.text = viewModel.dateFormatted
+        addressLabel.text = viewModel.dateFormatted
     }
 }
 

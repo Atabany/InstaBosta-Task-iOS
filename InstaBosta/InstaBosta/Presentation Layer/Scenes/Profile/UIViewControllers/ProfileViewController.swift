@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
+import RxDataSources
+
+
 
 class ProfileViewController: UIViewController {
     
@@ -15,11 +20,18 @@ class ProfileViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     
     
+    let viewModel: ProfileViewModel = ProfileViewModel(profileManager: ProfileWebServiceManager())
+    let disposeBag = DisposeBag()
+
+    
+    
+    
     // MARK: - vc life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         style()
+        
     }
 }
 
@@ -30,7 +42,9 @@ extension ProfileViewController {
         setupTableView()
         setupTableHeaderView()
         setupRefreshControl()
+        binding()
     }
+    
 }
 
 
@@ -38,6 +52,7 @@ extension ProfileViewController {
 extension ProfileViewController {
     private func style() {
         view.backgroundColor = .systemBackground
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 

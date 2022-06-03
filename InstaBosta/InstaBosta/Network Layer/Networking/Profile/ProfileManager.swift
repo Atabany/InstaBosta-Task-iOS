@@ -5,17 +5,37 @@
 //  Created by Mohamed Elatabany on 01/06/2022.
 
 import Foundation
-
+import RxSwift
 protocol ProfileManageable: AnyObject {
-    func fetchProfile(completion: @escaping (Result<ProfileViewModel, NSError>) -> Void)
+    var users: PublishSubject<[UserResponse]?> { get set }
+    var user: PublishSubject<UserResponse?> { get set }
+    func fetchUsers()
+    func fetchAlbums()
 }
 
 
-class ProfileManager: ProfileManageable {
-    func fetchProfile(completion: @escaping (Result<ProfileViewModel, NSError>) -> Void) {
+class ProfileWebServiceManager: ProfileManageable {
+    var users: PublishSubject<[UserResponse]?> = PublishSubject<[UserResponse]?>()
+    var user: PublishSubject<UserResponse?> = PublishSubject<UserResponse?>()
 
-        
-        
+    
+    private var disposeBag = DisposeBag()
+    
+    var api: BaseAPI = BaseAPI()
+    
+    func fetchUsers() {
+        let allUsersRequest = UserAPI.getAllUsers
+        api.fetchData(request: allUsersRequest, responseObservable: users)
+        users.subscribe(onNext: { [unowned self]  users in
+            guard let users = users else {return}
+            self.user.onNext(users.randomElement())
+        })
+        .disposed(by:  disposeBag)
+    }
+    
+    func fetchAlbums() {
         
     }
+    
+        
 }

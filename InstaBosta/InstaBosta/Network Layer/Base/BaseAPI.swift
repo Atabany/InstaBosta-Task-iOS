@@ -8,50 +8,49 @@
 //
 
 import Foundation
-import Alamofire
+import RxSwift
+import Moya
+import RxMoya
 
-class BaseAPI<T: TargetType> {
+
+class BaseAPI {
     
-    func fetchData<M: Decodable>(target: T, responseClass: M.Type, completion:@escaping (Result<M?, NSError>) -> Void) {
-        let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
-        let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
-        let params = buildParams(task: target.task)
-        
-        AF.request(target.baseURL + target.path, method: method, parameters: params.0, encoding: params.1, headers: headers).responseDecodable(of: M.self) { (response) in
-            
-            guard let statusCode = response.response?.statusCode else {
-                // ADD Custom Error
-                let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.genericError])
-                completion(.failure(error))
-                return
-            }
-            
-            
-            if statusCode == 200 { // 200 reflect success response
-                guard let model = response.value else {
-                    let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.genericError])
-                    completion(.failure(error))
+    let disposeBag = DisposeBag()
+    
+    func fetchData<T: TargetType, ModelType: Codable>(request: T, responseObservable: PublishSubject<ModelType>) {
+        let provider = MoyaProvider<T>()
+        let decoder: JSONDecoder = JSONDecoder()
+        provider.rx.request(request).subscribe { event in
+            switch event {
+            case .success(let response):
+                do {
+                    let decodedResponse = try decoder.decode(ModelType.self, from: response.data)
+                    responseObservable.onNext(decodedResponse)
+                } catch _ {
+                    responseObservable.onError(GatewayError.decoding)
+                }
+            case .failure(let error):
+                guard let moyaError = error as? MoyaError, let statusCode = moyaError.response?.statusCode else {
+                    responseObservable.onError(GatewayError.generic)
                     return
                 }
-                completion(.success(model))
-            } else {
-                // ADD custom error base on status code 404 / 401 /
-                // Error Parsing for the error message from the BE
-                let message = "Error Message Parsed From BE"
-                let error = NSError(domain: target.baseURL, code: statusCode, userInfo: [NSLocalizedDescriptionKey: message])
-                completion(.failure(error))
+                switch statusCode {
+                case 404:
+                    responseObservable.onError(GatewayError.badGateway)
+                default:
+                    let errorResponseJson: [String: Any]? = try? moyaError.response?.mapJSON() as? [String: Any]
+                    responseObservable.onError(GatewayError.backEnd(code: statusCode, payload: errorResponseJson))
+                }
             }
-        }
+        }.disposed(by: disposeBag)
     }
-    
-    
-    
-    private func buildParams(task: Task) -> ([String:Any], ParameterEncoding) {
-        switch task {
-        case .requestPlain:
-            return ([:], URLEncoding.default)
-        case .requestParameters(parameters: let parameters, encoding: let encoding):
-            return (parameters, encoding)
-        }
-    }
+}
+
+enum GatewayError: Error {
+    case generic
+    case noConnection
+    case serverFailure
+    case badGateway
+    case decoding
+    case backEnd(code: Int, payload: [String: Any]?)
 }

@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountSummaryHeaderView" customModule="InstaBosta" customModuleProvider="target">
             <connections>
+                <outlet property="addressLabel" destination="ol6-Ar-9GG" id="fbW-x2-ggr"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="ehI-ff-bFJ"/>
-                <outlet property="dateLabel" destination="ol6-Ar-9GG" id="fbW-x2-ggr"/>
                 <outlet property="nameLabel" destination="aC9-8I-iwo" id="uGp-5Q-fzX"/>
                 <outlet property="welcomeLabel" destination="WsX-AN-8F6" id="sxa-fh-8Nf"/>
             </connections>

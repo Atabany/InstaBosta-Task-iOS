@@ -15,7 +15,8 @@ class PhotoDetialsVC: UIViewController, UIScrollViewDelegate{
     var scrollView: UIScrollView = UIScrollView()
     var imgPhoto: UIImageView = UIImageView()
     var closeButton: UIButton = UIButton(type: .system)
-    
+    var shareButton: UIButton = UIButton(type: .system)
+
     
     // MARK: - Properties
     var imageURL : String!
@@ -54,7 +55,8 @@ extension PhotoDetialsVC {
     private func setupLayout() {
         setupScrollView()
         setupImagePhoto()
-        setupButton()
+        setupCloseButton()
+        setupShareButton()
     }
     
     
@@ -82,7 +84,7 @@ extension PhotoDetialsVC {
     }
     
     
-    private func setupButton() {
+    private func setupCloseButton() {
         scrollView.addSubview(closeButton)
         NSLayoutConstraint.activate([
             closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -92,6 +94,18 @@ extension PhotoDetialsVC {
         ])
     }
     
+    
+    private func setupShareButton() {
+        scrollView.addSubview(shareButton)
+        NSLayoutConstraint.activate([
+            shareButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            shareButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            shareButton.widthAnchor.constraint(equalToConstant: 40),
+            shareButton.heightAnchor.constraint(equalToConstant: 40),
+        ])
+    }
+    
+
 
     
     // MARK: - Style
@@ -113,6 +127,13 @@ extension PhotoDetialsVC {
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
+        
+        
+        shareButton.translatesAutoresizingMaskIntoConstraints = false
+        shareButton.setImage(UIImage(systemName: "square.and.arrow.up.fill"), for: .normal)
+        shareButton.addTarget(self, action: #selector(shareButtonAction), for: .touchUpInside)
+        
+        
     }
 
 }
@@ -126,4 +147,15 @@ extension PhotoDetialsVC {
         dismiss(animated: true)
     }
     
+    
+    @objc
+    func shareButtonAction() {
+        if let currrentImage = imgPhoto.image {
+            let imageToShare = [currrentImage]
+            let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+    }
+    
+
 }

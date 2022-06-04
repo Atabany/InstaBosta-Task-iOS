@@ -647,7 +647,6 @@
 			);
 			mainGroup = 2D587AA22847819200139A58;
 			packageReferences = (
-				2D1B5102284A6337001541A9 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				2D1B510B284A6447001541A9 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				2D1B511B284A9794001541A9 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
@@ -1003,14 +1002,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2D1B5102284A6337001541A9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		2D1B510B284A6447001541A9 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";

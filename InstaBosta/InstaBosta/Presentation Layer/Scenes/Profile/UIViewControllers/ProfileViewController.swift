@@ -16,8 +16,8 @@ class ProfileViewController: UIViewController {
     // MARK: - UI Components
     var headerView = AccountSummaryHeaderView(frame: .zero)
     var tableView = UITableView()
-    let refreshControl = UIRefreshControl()
-    
+    let spinner = UIActivityIndicatorView(style: .large)
+
     
     let viewModel: ProfileViewModel = ProfileViewModel(profileManager: ProfileWebServiceManager())
     let disposeBag = DisposeBag()
@@ -54,6 +54,7 @@ extension ProfileViewController {
 extension ProfileViewController {
     private func style() {
         view.backgroundColor = .systemBackground
+        spinner.startAnimating()
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 class PhotoCollectionCell: UICollectionViewCell {
     
     static let reuseId = "PhotoCollectionCell"
-     let photoImageView = UIImageView()
+    let photoImageView = UIImageView.init(image:  UIImage(named: K.Images.placeholder) ?? UIImage())
 
     
     
@@ -27,7 +27,8 @@ class PhotoCollectionCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        photoImageView.backgroundColor = UIColor.lightGray
+        photoImageView.image = UIImage(named: K.Images.placeholder) ?? UIImage()
+        photoImageView.backgroundColor = UIColor.darkGray
     }
     
     private func configure() {
@@ -40,7 +41,6 @@ class PhotoCollectionCell: UICollectionViewCell {
             photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-    
     
     
     

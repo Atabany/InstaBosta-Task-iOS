@@ -17,6 +17,7 @@ extension ProfileViewController {
         tableView.tableFooterView = UIView()
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundView = spinner
         
         view.addSubview(tableView)
         

@@ -9,7 +9,6 @@ import UIKit
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
-
 extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

@@ -20,6 +20,8 @@ class ProfileViewModel {
     var albums: BehaviorRelay<[AlbumResponse]> = BehaviorRelay<[AlbumResponse]>(value: [])
     var tableViewSections: BehaviorRelay<[ProfileSection]> = BehaviorRelay<[ProfileSection]>(value: [])
     let disposeBag = DisposeBag()
+    let showLoading = BehaviorRelay<Bool>(value: true)
+
     
     var profileManager: ProfileManageable!
     
@@ -58,8 +60,9 @@ class ProfileViewModel {
     
     
     private func bindAlbumsDataSource() {
-        albums.subscribe(onNext: { [weak self] albums in
-            self?.createTableViewSections(albums: albums)
+        albums.subscribe(onNext: { [unowned self] albums in
+            self.createTableViewSections(albums: albums)
+            self.showLoading.accept(false)
         }).disposed(by: disposeBag)
     }
     
@@ -73,6 +76,7 @@ class ProfileViewModel {
 
 
     private func fetchProfileData() {
+        showLoading.accept(true)
         profileManager.fetchUsers()
     }
     

@@ -18,7 +18,19 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
     func binding() {
         bindTitle()
         bindCollectionView()
+        bindSearchBar()
     }
+    
+    
+    private func bindSearchBar() {
+        searchController.searchBar.rx.text
+            .orEmpty
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance) // Wait 0.5 for changes.
+            .subscribe(onNext: {[unowned self] value in
+                self.viewModel.search(with: value)
+            }).disposed(by: disposeBag)
+    }
+
     
     
     private func bindTitle() {
@@ -29,8 +41,7 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
         
     }
     
-    
-    
+
     private func bindCollectionView() {
         collectionView.register(PhotoCollectionCell.self, forCellWithReuseIdentifier: PhotoCollectionCell.reuseId)
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
@@ -45,9 +56,10 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
     // MARK: - Private Methods
     private func setCollectionViewDataSource() {
         photoGridDataSource = RxCollectionViewSectionedReloadDataSource<AlbumPhotosGridSection>(
-            configureCell: { sectionsData, collectionView, indexPath, albumPhoto in
+            configureCell: { sectionsData, collectionView, indexPath, photo in
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionCell.reuseId, for: indexPath) as? PhotoCollectionCell else {return UICollectionViewCell()}
-                cell.photoImageView.setImage(from: albumPhoto.thumbnailURL)
+                cell.photoImageView.setImage(from: photo.thumbnailURL)
+                print(photo.title)
                 return cell
             })
     }

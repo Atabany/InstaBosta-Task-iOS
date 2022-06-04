@@ -17,7 +17,7 @@ class AlbumPhotosGridViewModel {
 
     // MARK: - Global Variables
     var album: AlbumResponse
-    var allAlbumPhotos: BehaviorRelay<[Photo]> = BehaviorRelay<[Photo]>(value: [])
+    var allPhotos: BehaviorRelay<[Photo]> = BehaviorRelay<[Photo]>(value: [])
     var collectionViewAlbumPhotos: BehaviorRelay<[Photo]> = BehaviorRelay<[Photo]>(value: [])
     var collectionViewSections: BehaviorRelay<[AlbumPhotosGridSection]> = BehaviorRelay<[AlbumPhotosGridSection]>(value: [])
     let title: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
@@ -43,10 +43,10 @@ class AlbumPhotosGridViewModel {
     
     private func bindAlbumPhotos() {
         photosService.photos.subscribe(onNext: { [unowned self] photos in
-            self.allAlbumPhotos.accept(photos ?? [])
+            self.allPhotos.accept(photos ?? [])
         }).disposed(by: disposeBag)
         
-        allAlbumPhotos.subscribe(onNext: {[unowned self] allAlbumPhotos in
+        allPhotos.subscribe(onNext: {[unowned self] allAlbumPhotos in
             self.collectionViewAlbumPhotos.accept(allAlbumPhotos)
         }).disposed(by: disposeBag)
     }
@@ -72,6 +72,17 @@ class AlbumPhotosGridViewModel {
         ]
         collectionViewSections.accept(sections)
     }
+    
+    
+    // MARK: - Search
+    
+    func search(with text: String) {
+        let selectedFilteredPhotos = allPhotos.value.filter { $0.title.lowercased()
+            .contains(text.lowercased()) }
+        self.collectionViewAlbumPhotos.accept((text == "")  ? allPhotos.value :   selectedFilteredPhotos)
+    }
+
+
     
     
 

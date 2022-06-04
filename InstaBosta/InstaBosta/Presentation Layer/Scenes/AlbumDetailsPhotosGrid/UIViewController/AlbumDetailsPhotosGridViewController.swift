@@ -62,7 +62,6 @@ extension AlbumDetailsPhotosGridViewController {
     
     private func configureSearchController() {
         searchController                                   = UISearchController()
-        searchController.searchResultsUpdater                  = self
         searchController.searchBar.placeholder                 = K.Strings.PhotosGrid.searchImagesPlaceholder
         searchController.obscuresBackgroundDuringPresentation  = false
         navigationItem.searchController                        = searchController
@@ -78,10 +77,6 @@ extension AlbumDetailsPhotosGridViewController {
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemBackground
     }
-    
-
-
-
 
 }
 
@@ -92,17 +87,8 @@ extension AlbumDetailsPhotosGridViewController {
     private func style() {
         view.backgroundColor = UIColor.systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-
     }
 }
 
 
-// MARK: - Search Delegate
-extension AlbumDetailsPhotosGridViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text, !(filter.isEmpty) else {
-            return
-        }
-        print(filter)
-    }
-}
+

@@ -8,12 +8,12 @@
 import Foundation
 
 enum K {
+    
     enum colors {
         static let appColor = "#F40005"
     }
     
     enum Strings {
-        
         enum Profile {
             static let myAlbums = "My Albums"
         }
@@ -21,8 +21,12 @@ enum K {
         enum PhotosGrid {
             static let searchImagesPlaceholder = "Search in images"
         }
-        
     }
+    
+    enum Images {
+        static let placeholder = "placeholder"
+    }
+    
     
 }
 

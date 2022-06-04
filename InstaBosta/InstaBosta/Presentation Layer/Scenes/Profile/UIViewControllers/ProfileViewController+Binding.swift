@@ -7,7 +7,7 @@
 
 import Foundation
 import RxDataSources
-
+import RxSwift
 
 // MARK: - ProfileViewController+Binding
 
@@ -23,6 +23,11 @@ extension ProfileViewController {
         bindUserHeader()
         tableViewBinding()
         tableViewSelection()
+        bindActivityIndicator()
+    }
+
+    private func bindActivityIndicator() {
+        viewModel.showLoading.asObservable().observe(on: MainScheduler.instance).bind(to: spinner.rx.isHidden).disposed(by: disposeBag)
     }
 
 

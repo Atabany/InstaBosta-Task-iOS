@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D1B510D284A6447001541A9 /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1B510C284A6447001541A9 /* Differentiator */; };
 		2D1B510F284A6447001541A9 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 2D1B510E284A6447001541A9 /* RxDataSources */; };
 		2D1B5111284A9406001541A9 /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5110284A9406001541A9 /* ProfileSection.swift */; };
 		2D1B5113284A94B0001541A9 /* ProfileViewController+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B5112284A94B0001541A9 /* ProfileViewController+Binding.swift */; };
@@ -128,7 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1B5121284A9794001541A9 /* RxMoya in Frameworks */,
-				2D1B510D284A6447001541A9 /* Differentiator in Frameworks */,
 				2D1B510F284A6447001541A9 /* RxDataSources in Frameworks */,
 				2D1B511D284A9794001541A9 /* Moya in Frameworks */,
 			);
@@ -594,7 +592,6 @@
 			);
 			name = InstaBosta;
 			packageProductDependencies = (
-				2D1B510C284A6447001541A9 /* Differentiator */,
 				2D1B510E284A6447001541A9 /* RxDataSources */,
 				2D1B511C284A9794001541A9 /* Moya */,
 				2D1B5120284A9794001541A9 /* RxMoya */,
@@ -1033,11 +1030,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2D1B510C284A6447001541A9 /* Differentiator */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2D1B510B284A6447001541A9 /* XCRemoteSwiftPackageReference "RxDataSources" */;
-			productName = Differentiator;
-		};
 		2D1B510E284A6447001541A9 /* RxDataSources */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2D1B510B284A6447001541A9 /* XCRemoteSwiftPackageReference "RxDataSources" */;

@@ -22,8 +22,6 @@ class ProfileCoordinator: Coordinator {
         rootViewController = UIViewController()
     }
     
-
-    
     
     
     lazy var profileViewController: ProfileViewController = {
@@ -37,8 +35,6 @@ class ProfileCoordinator: Coordinator {
 
     
 
-    
-    
     func start() {
         rootViewController = profileViewController
     }
@@ -48,7 +44,6 @@ class ProfileCoordinator: Coordinator {
         guard let album = album else {
             return
         }
-
         let photosGridVC = AlbumDetailsPhotosGridViewController(viewModel: AlbumPhotosGridViewModel(album: album, photosService: AlbumPhotosWebServiceManager()))
         rootViewController.navigationController?.pushViewController(photosGridVC, animated: true)
     }

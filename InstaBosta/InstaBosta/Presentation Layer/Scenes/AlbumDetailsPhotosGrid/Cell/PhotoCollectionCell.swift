@@ -10,7 +10,9 @@ import UIKit
 class PhotoCollectionCell: UICollectionViewCell {
     
     static let reuseId = "PhotoCollectionCell"
-    let photoImageView = UIImageView.init(image:  UIImage(named: K.Images.placeholder) ?? UIImage())
+    let photoImageView  =  UIImageView.init(image:  UIImage(named: K.Images.placeholder) ?? UIImage())
+
+    
 
     
     

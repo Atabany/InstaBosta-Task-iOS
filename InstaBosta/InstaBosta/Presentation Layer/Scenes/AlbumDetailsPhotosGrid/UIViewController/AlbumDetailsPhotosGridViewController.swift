@@ -21,6 +21,8 @@ class AlbumDetailsPhotosGridViewController: UIViewController {
     var disposeBag = DisposeBag()
     // MARK: - Data Source
     var photoGridDataSource: RxCollectionViewSectionedReloadDataSource<AlbumPhotosGridSection>?
+    // MARK: - Coordinator
+    lazy var coordinator: AlbumCoordinator  = AlbumCoordinator(vc: self)
 
     
     //MARK: - Life Cycle

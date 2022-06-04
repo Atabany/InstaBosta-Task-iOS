@@ -19,6 +19,7 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
         bindTitle()
         bindCollectionView()
         bindSearchBar()
+        bindSelection()
     }
     
     
@@ -30,7 +31,7 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
                 self.viewModel.search(with: value)
             }).disposed(by: disposeBag)
     }
-
+    
     
     
     private func bindTitle() {
@@ -41,7 +42,7 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
         
     }
     
-
+    
     private func bindCollectionView() {
         collectionView.register(PhotoCollectionCell.self, forCellWithReuseIdentifier: PhotoCollectionCell.reuseId)
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
@@ -49,6 +50,8 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
         guard let photoGridDataSource = photoGridDataSource else {return}
         viewModel.collectionViewSections.bind(to: collectionView.rx.items(dataSource: photoGridDataSource))
             .disposed(by: disposeBag)
+        
+        
     }
     
     
@@ -59,10 +62,23 @@ extension AlbumDetailsPhotosGridViewController: UICollectionViewDelegate {
             configureCell: { sectionsData, collectionView, indexPath, photo in
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionCell.reuseId, for: indexPath) as? PhotoCollectionCell else {return UICollectionViewCell()}
                 cell.photoImageView.setImage(from: photo.thumbnailURL)
-                print(photo.title)
                 return cell
             })
     }
+    
+    
+    // MARK: - Selection
+    
+    private func bindSelection() {
+        guard let photoGridDataSource = photoGridDataSource else {return}
+        
+        collectionView.rx.itemSelected.subscribe(onNext: {[weak self] indexPath in
+            let selectedItem = photoGridDataSource[indexPath]
+            self?.coordinator.goToDetails(imageURL: selectedItem.thumbnailURL )
+        }).disposed(by: self.disposeBag)
+        
+    }
+    
     
     
     

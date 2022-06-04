@@ -12,7 +12,7 @@ We have 2 targets in the App
 #### - InstaBosta
 The App's main target. Gots the app logic, coordinators...
 #### - InstaBostaTests
-A simple tests target for WallaMarvelAPI as a sample.
+A simple tests target for InstaBostaTests as a sample.
 
 ## App Structure
 The app uses a MVVM pattern with RxSwift and  Coordinator, but not being 100% faithful because it was built with Layered Architecture in mind.

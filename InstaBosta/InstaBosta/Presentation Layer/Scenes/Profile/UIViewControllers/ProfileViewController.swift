@@ -19,11 +19,22 @@ class ProfileViewController: UIViewController {
     let spinner = UIActivityIndicatorView(style: .large)
 
     
-    let viewModel: ProfileViewModel = ProfileViewModel(profileManager: ProfileWebServiceManager())
+    let viewModel: ProfileViewModel
     let disposeBag = DisposeBag()
 
     var albumsDataSource: RxTableViewSectionedReloadDataSource<ProfileSection>?
-
+    var showDetailsRequested: ((AlbumResponse)->())?
+    
+    
+    init(viewModel: ProfileViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 
     // MARK: - vc life cycle
     override func viewDidLoad() {

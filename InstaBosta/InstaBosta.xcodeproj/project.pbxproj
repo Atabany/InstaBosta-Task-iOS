@@ -51,6 +51,10 @@
 		2D587B2E2847ADD300139A58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B2D2847ADD300139A58 /* Constants.swift */; };
 		2D587B312847AEB200139A58 /* UIColor+HexValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B302847AEB200139A58 /* UIColor+HexValue.swift */; };
 		2D587B362847BB4400139A58 /* ProfileViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D587B352847BB4400139A58 /* ProfileViewController+TableView.swift */; };
+		2DD66B30284B9E0F0022720A /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD66B2F284B9E0F0022720A /* ApplicationCoordinator.swift */; };
+		2DD66B33284B9E4A0022720A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD66B32284B9E4A0022720A /* Coordinator.swift */; };
+		2DD66B37284B9E800022720A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD66B36284B9E800022720A /* MainCoordinator.swift */; };
+		2DD66B3A284B9EAA0022720A /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD66B39284B9EAA0022720A /* ProfileCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,10 @@
 		2D587B2D2847ADD300139A58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2D587B302847AEB200139A58 /* UIColor+HexValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexValue.swift"; sourceTree = "<group>"; };
 		2D587B352847BB4400139A58 /* ProfileViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+TableView.swift"; sourceTree = "<group>"; };
+		2DD66B2F284B9E0F0022720A /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		2DD66B32284B9E4A0022720A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2DD66B36284B9E800022720A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		2DD66B39284B9EAA0022720A /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +235,7 @@
 				2D587B2C2847ADCD00139A58 /* Common */,
 				2D587ADE284781F200139A58 /* Configurations */,
 				2D587AF128478E7A00139A58 /* Network Layer */,
+				2DD66B2D284B9DE30022720A /* Coordinator Layer */,
 				2D587B0D2847905600139A58 /* BusinessLogic Layer */,
 				2D587B0528478F0800139A58 /* Data Layer */,
 				2D587AE42847844400139A58 /* Presentation Layer */,
@@ -405,8 +414,7 @@
 		2D587B0D2847905600139A58 /* BusinessLogic Layer */ = {
 			isa = PBXGroup;
 			children = (
-				2D587B272847AC8400139A58 /* Album */,
-				2D587B0E2847905900139A58 /* Profile */,
+				2DD66B2E284B9DF20022720A /* ViewModels */,
 			);
 			path = "BusinessLogic Layer";
 			sourceTree = "<group>";
@@ -471,6 +479,58 @@
 				2D1B5132284ABE31001541A9 /* UICollectionViewFlowLayout + Ext.swift */,
 			);
 			path = "UIKit+Extensions";
+			sourceTree = "<group>";
+		};
+		2DD66B2D284B9DE30022720A /* Coordinator Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2DD66B38284B9E9B0022720A /* Profile */,
+				2DD66B35284B9E720022720A /* Main */,
+				2DD66B34284B9E570022720A /* Protocols */,
+				2DD66B31284B9E3C0022720A /* App Coordinator */,
+			);
+			path = "Coordinator Layer";
+			sourceTree = "<group>";
+		};
+		2DD66B2E284B9DF20022720A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2D587B272847AC8400139A58 /* Album */,
+				2D587B0E2847905900139A58 /* Profile */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2DD66B31284B9E3C0022720A /* App Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2DD66B2F284B9E0F0022720A /* ApplicationCoordinator.swift */,
+			);
+			path = "App Coordinator";
+			sourceTree = "<group>";
+		};
+		2DD66B34284B9E570022720A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2DD66B32284B9E4A0022720A /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2DD66B35284B9E720022720A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2DD66B36284B9E800022720A /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2DD66B38284B9E9B0022720A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2DD66B39284B9EAA0022720A /* ProfileCoordinator.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,6 +661,7 @@
 				2D587B0428478EE000139A58 /* ProfileManager.swift in Sources */,
 				2D1B5135284ABEB1001541A9 /* AlbumPhotosGridViewModel.swift in Sources */,
 				2D1B5142284AC529001541A9 /* AlbumDetailsPhotosGridViewController + Binding.swift in Sources */,
+				2DD66B33284B9E4A0022720A /* Coordinator.swift in Sources */,
 				2D1B5133284ABE31001541A9 /* UICollectionViewFlowLayout + Ext.swift in Sources */,
 				2D587AF028478D9000139A58 /* Config.swift in Sources */,
 				2D587B1B284791E500139A58 /* AccountSummaryHeaderView.swift in Sources */,
@@ -609,6 +670,7 @@
 				2D1B5146284ACC02001541A9 /* UIImage+Ext.swift in Sources */,
 				2D1B513E284AC06C001541A9 /* PhotosAPI.swift in Sources */,
 				2D587B2E2847ADD300139A58 /* Constants.swift in Sources */,
+				2DD66B30284B9E0F0022720A /* ApplicationCoordinator.swift in Sources */,
 				2D587AFD28478EA000139A58 /* BaseAPI.swift in Sources */,
 				2D587B172847915300139A58 /* ProfileViewModel.swift in Sources */,
 				2D587B0128478EA000139A58 /* BaseResponse.swift in Sources */,
@@ -617,6 +679,8 @@
 				2D587AFE28478EA000139A58 /* BaseParamaters.swift in Sources */,
 				2D587AB12847819200139A58 /* SceneDelegate.swift in Sources */,
 				2D587B362847BB4400139A58 /* ProfileViewController+TableView.swift in Sources */,
+				2DD66B37284B9E800022720A /* MainCoordinator.swift in Sources */,
+				2DD66B3A284B9EAA0022720A /* ProfileCoordinator.swift in Sources */,
 				2D587B2B2847ACD900139A58 /* Album.swift in Sources */,
 				2D1B5144284ACAD5001541A9 /* PhotoCollectionCell.swift in Sources */,
 				2D1B512C284ABCC2001541A9 /* AlbumDetailsPhotosGridViewController.swift in Sources */,

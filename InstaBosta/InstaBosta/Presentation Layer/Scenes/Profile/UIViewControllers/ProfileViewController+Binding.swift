@@ -56,8 +56,7 @@ extension ProfileViewController {
         tableView.rx.itemSelected.subscribe(onNext: { [unowned self] indexPath in
             self.tableView.deselectRow(at: indexPath, animated: true)
             guard let album = self.albumsDataSource?[indexPath] else { return }
-            let photosGridVC = AlbumDetailsPhotosGridViewController(viewModel: AlbumPhotosGridViewModel(album: album, photosService: AlbumPhotosWebServiceManager()))
-            self.navigationController?.pushViewController(photosGridVC, animated: true)
+            self.showDetailsRequested?(album)
         }).disposed(by: self.disposeBag)
     }
     

@@ -86,7 +86,6 @@ extension AlbumDetailsPhotosGridViewController {
 extension AlbumDetailsPhotosGridViewController {
     private func style() {
         view.backgroundColor = UIColor.systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
